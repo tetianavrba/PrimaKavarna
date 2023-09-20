@@ -1,0 +1,508 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    
+}
+/*p, ul, li, h1, h2, h3,*/
+* {
+    margin: 0;
+    padding: 0;
+   
+}
+
+h1 {
+    font-size: 55px;
+    padding: 15px 0 30px;
+}
+
+
+
+h2 {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    
+}
+
+a, .headerInfo i {
+    transition: 0.3s ease-in-out all;
+}/*v ikonkach barva měni se pomalu a plati pro všechny */
+
+h1, h2, h3, h4, .headerInfo {
+    font-family: 'Kaushan Script', cursive;/*font pro nadpisy*/
+}
+
+h1::after,
+h1::before {
+   content: "-";
+}
+
+p, li {
+    line-height: 1.6;
+}
+ img {
+    vertical-align: top;  /*tekst kava k obrazku*/
+ }
+
+
+.container {
+   /* width: 1100px; určuje širku se začatku propisujeme a pak to nastavime u přispusobení media*/
+    margin: auto; /*dava na střed stranky*/
+
+}
+
+
+/*ADAPTACE STRANKY*/
+
+
+@media screen and (max-width: 479px) {/*zvužuje stranku*/
+    .container {width: 92%}
+}
+@media screen and (min-width: 480px) {/*od nekolika px do 0px na širků*/
+    .container {width: 95%}
+}
+@media screen and (min-width: 740px) {
+    .container {width: 95%}
+}
+@media screen and (min-width: 960px) {
+    .container {width: 95%}
+}
+@media screen and (min-width: 1200px) {
+    .container {width: 1100px}/*určuje širku*/
+
+}
+
+
+
+
+.headerTop {
+    background: rgba(72, 52, 42, 0.7); /*rgba a 0.7 děla barvu světlejši*/
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);/*podtržení propiše čaru*/
+
+
+}
+
+
+.headerTop .container {
+    display: flex;/*posklada vedle sebe*/
+    justify-content: space-between;/*rozhody na ruzné strany*/
+    align-items: center; /*zarovnálogo na stred*/
+}
+.menu  ul {
+    display: flex;
+    list-style: none;
+}
+.menu ul li a {
+    color: #fff;
+    font-weight: 700;/*tučny tekst*/
+    text-transform: uppercase; /*udela velká pismená*/
+    padding: 15px; /*udela odstup mezi slovama*/
+    display: block;/*abych chovalo se jako block*/
+    padding: 34px 15px;/*posune menu na stred*/
+}
+
+.menu ul li a:hover {
+   background: rgba(255, 255, 255, 0.4);
+
+}
+
+@media screen and (max-width: 750px) {
+    .menu ul li a {
+        padding: 34px 5px;/*nastavujeme padding menší abych menu zcuclo*/
+    }
+}
+@media screen and (max-width: 630px) {
+    .headerTop .container {
+        flex-direction: column; /*abych při zmenšeni logo posuvalo se nahoru zrušime flex*/
+    } 
+}
+
+@media screen and (max-width: 500px){
+    .menu ul {
+        flex-direction: column;/*posklada menu pod sebe*/
+        text-align: center;
+    }
+    .menu ul li a {
+        padding: 10px;/*zmenši pismena pri zmenšení*/
+    }
+}
+
+
+
+header {
+    background: url("../img/header.jpg") center center no-repeat;
+    background-size: cover;
+}
+
+.headerInfo {
+    color: #fff;
+    text-align: center;
+}
+
+
+
+.headerInfoBig {
+    font-size: 100px;
+    border-bottom: 1px solid #fff;/*podtržení*/
+    display: inline-block;/*podtrženi pod tekstem*/
+    margin-bottom: 15px;
+    
+    
+}
+
+.headerInfo {
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.4);/*stranka text shadow css generation*/
+    padding: 340px 0 45px;
+}
+
+.headerInfo i {
+    font-size: 40px;
+}
+.headerInfo a {
+    color: #fff;
+    margin: 15px 8px 0;
+    display: inline-block;/*ikonky od sebe*/
+
+}
+
+.fa-facebook-f:hover {
+   color: #1877F2; 
+}
+.fa-instagram:hover {
+    color: #E4405F;
+}
+.fa-youtube:hover {
+    color: #E4405F;
+}
+
+/*Section*/ /*stylujeme v sekci Section jina čast*/
+
+
+
+@media screen and (max-width: 630px)
+{
+.headerInfoBig {
+     font-size:15vw; 
+} 
+.headerInfo {
+    padding-top: 100px;
+}
+}
+
+
+
+.onas {
+    text-align: center;
+    padding: 70px 0 45px;
+}
+.onas span {
+    font-size: 14px;
+
+}
+
+.onasVse {
+    display: flex; /*posklada kontejnery cedle sebe*/
+    justify-content: space-between;
+    margin-top: 70px;
+
+}
+
+.onasSloupec {  /*zafiksujeme velikost a rozdelime containery*/
+
+   flex: 0 1 300px; /*kratši zapys*/
+
+    flex-grow: 0;/*rozširuje prostor*/
+    flex-shrink: 1; /*zmenšuje prostor*/
+    flex-basis: 300px;
+
+    
+}
+
+.onasVse h2 {
+    border-bottom: 1px solid #ccc;
+    display: inline-block;
+    padding: 20px 0; /*odstup tekstu od obrazku*/
+    margin-bottom: 20px;/*odstup tekstu od obrazku*/
+}
+
+.onasSloupec p {
+    padding-bottom: 15px;
+}
+ .btn {
+    border: 1px solid #000;
+    padding: 10px 25px;
+    color: #000;
+    border-radius: 10px; /*zaokruhli*/
+    display: inline-block; /*rameček odstup od tekstu*/
+ }
+
+ .btn:hover {
+    color: #a0785d ;
+    border-color:#a0785d;
+
+ }
+
+ .btn:hover i {
+    transform: translateX(5px); /*posune šipky doprava když klikneš*/
+ }
+
+ @media screen and (max-width: 1000px){
+    .onasSloupec img {
+        width: 96%;
+
+    }
+ }
+ @media screen and (max-width: 1000px){
+    .onasVse {
+        flex-direction: column;/*prizpusobení obrazku*/
+        gap: 50px;
+    }
+    .onasSloupec {
+        display: flex; /*text a obrazek da vedle sebe*/
+        gap: 30px;/*rozestup mězi prvkama funguje jen u flex*/
+    }
+    .onasSloupec img {
+        width: 300px;
+        height: 200px;
+    }
+    .onasVse h2 {
+        padding-top: 0;
+    }
+
+ }
+
+ @media screen and (max-width: 800px){
+    .onasSloupec {
+        flex-direction: column;
+        align-items: center;/*vycentrujeme obrazky*/
+        gap: 20px;
+    }
+ }
+
+ @media screen and (max-width: 330px){/*rozestup mězi stranama obrazků*/
+    .onasSloupec img {
+        width: 100%;
+        height: 100%;
+
+    }
+ }
+
+
+ .kava {
+    display: flex; /*dava obrzky vedle sebe*/
+    
+
+ }
+
+ .brown {
+    background: #a0785d;
+    color: #fff;
+    text-align: right;
+    padding: 60px 30px 60px 10%;
+    position: relative;/*vuči čemu bude posouvat pruhledný obdelnik*/
+    
+
+ }
+ .brown, .kava img {
+    width: 50%; /*rozstavi rovnoměrně obrazky*/
+ }
+ .brown h2 {
+    padding-bottom: 40px;
+ }
+
+ .brown h2:nth-of-type(2) {/*odstup pouze druheho odstavce*/
+    padding-top: 90px;
+ }
+
+ .obdelnik {
+    position: absolute;/*vuči čemu bude posouvat*/
+    width: 150px;
+    height: 100%;
+    background: #a0785d;
+    opacity: 50%;
+    top: 0 ;
+    left: 100%;
+    
+ }
+
+ @media screen and (max-width: 800px){
+    .kava img,
+    .obdelnik {
+        display: none;/*odstranuje obrazek kavových zrn*/
+       
+    }
+    .brown {
+        width: 100%;
+    }
+ }
+
+
+.tip  {
+    padding: 80px 0;
+    
+}
+.tip .container, 
+.tipObr {/*prostor mězi fotkama*/
+    display: flex;
+    justify-content: space-between;
+    
+}
+.tipObr {
+    width: 60%;
+}
+.tipObr img {/*stin u fotek*/
+    box-shadow: 15px 15px 0 #a0785d;
+}
+
+.tipText {
+   width: 30%; 
+}
+.tipText h2 {
+    padding-bottom: 25px;
+}
+.tipText p {
+    padding-bottom: 15px;
+}
+
+@media screen and (max-width: 1125px){
+    .tipObr img {
+        width:26vw ;/*zmenšujeme obrazky*/
+        height: 39vw;
+
+    }
+}
+@media screen and (max-width: 900px){
+    .tip .container {
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+        text-align: center;
+    }
+    .tipText {
+        width: 100%;/*abych text byl na celou šiřku*/
+    }
+   
+    .tipObr  {   /*dame obrazky od sebe*/
+   width: 70%;
+   
+    }
+    
+}
+@media screen and (max-width: 400px){
+    .tipObr img {
+        box-shadow: 3vw 3vw 0 #a0785d;/*odstin zmenšime*/
+    }
+}
+
+
+/*footer spodní čast stranky*/
+
+.pata {
+    padding: 85px 0;
+    background: #805f49;
+    color: #fff;
+    font-size: 14px;
+   
+}
+.pata  .container {
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+
+
+.fb {
+    width: 340px;
+    height: 150px;
+    background: #1877F2;
+
+}
+
+.pata h3 {
+    padding-bottom: 25px;
+}
+.pata ul {
+    list-style: none;
+    line-height: 1.6;
+}
+.pata ul li a {
+    color: #fff;
+    text-transform: lowercase;
+
+}
+.pata ul li::first-letter{
+    text-transform: uppercase;
+
+}
+.pata ul li a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+.podPatou .container {
+    display: flex;
+    justify-content: space-between;
+   
+}
+.podPatou a {
+    color: #000;
+    font-weight: 700;
+}
+.podPatou {
+    font-size: 14px;
+    padding: 15px 0;
+}
+.podPatou a:hover {
+    color: #a0785d;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 800px){
+     .fb {
+        display: none;
+    }
+   
+}
+@media screen and (min-width: 799px){/*od 800px směrem nahorů,do vice px, nebude v seznamu facebook při rozširovaní*/
+    .face {
+        display: none;
+    }
+}
+@media screen and (max-width: 400px){
+    .pata .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+    .pata {
+        padding: 40px 0;
+    }
+    .copy .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+}
+@media screen and (max-width: 700px){
+        .copyl a {
+            display: block;
+        }
+       .copyl span {
+        display: none;
+       }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
